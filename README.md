@@ -11,6 +11,24 @@ Very early version of a frontend for [Laravel Voyager Admin][link-voyager].
 
 I have been using a custom CMS based on this [video][link-tutplus-video] for my personal projects, and decided to adapt it to Voyager.
 
+## What works
+
+For now, after a fresh install, you get without any further setup:
+
+- A home page displaying 3 blog posts (not necesarily the last ones...yet)
+- A blog list page at `/blog`
+- A single post page at `/blog/{id}/{slug}`
+- Every page you create will be accessible at `/{slug}`
+
+
+Explaination:
+
+
+Every page type (page, blog, blog post and home) has a specific template associated. See `src/Templates`.
+It contains the logic to "prepare" the views (ie: load 3 blog post for the home page)
+You can replace them or create your own, by overwriting the config files `bow.php` in the main config folder.
+Once you are done, you will need to add it to the list of available pages in voyager > tool > database > page > edit > template. And edit the template for for that specific page (this will be automated soon).
+All the views are editable under `resources/views/vendor/bow` in your project once you have followed the install process.
 
 
 ## Install

@@ -1,8 +1,8 @@
-<article>
-    <h2>{{ $post->title }}</h2>
-    <p>
-        {{-- Posted by {{ $post->author->name }} on {{ $post->published_at }} --}}
-    </p>
+<div class="container">
 
+  <div class="starter-template">
+    <h1>{{ $post->title }}</h1>
     {!! $post->body !!}
-</article>
+  </div>
+
+</div><!-- /.container -->

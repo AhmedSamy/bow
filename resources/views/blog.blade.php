@@ -1,13 +1,11 @@
+<div class="container">
 @foreach($posts as $post)
-    <article>
-        <h2>
-            <a href="{{ route('blog.post', [$post->id, $post->slug]) }}">
-                {{ $post->title }}
-            </a>
-        </h2>
+  <div class="starter-template">
+    <h1><a href="{{ route('blog.post', [$post->id, $post->slug]) }}">{{ $post->title }}</a></h1>
+    {!! $post->excerpt or $post->body !!}
+  </div>
+  @endforeach
 
-        {!! $post->excerpt or $post->body !!}
-    </article>
-@endforeach
+</div><!-- /.container -->
 
 {!! $posts->links() !!}

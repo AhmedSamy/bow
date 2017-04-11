@@ -2,13 +2,18 @@
 
 @section('title', $page->title)
 
-@section('heading', 'Welcome')
-
 @section('content')
     @if($page->view)
         {!! $page->view->render() !!}
     @else
-    {!! $page->body !!}
+        <div class="container">
+
+          <div class="starter-template">
+            <h1>{{ $page->title }}</h1>
+            {!! $page->body !!}
+          </div>
+
+        </div><!-- /.container -->
     @endif
 @endsection
 
